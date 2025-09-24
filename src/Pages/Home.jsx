@@ -1,14 +1,15 @@
 import React from 'react'
-import InputSearch from '../Components/InputSearch'
-import Header from '../Components/Header'
-import logo from '../assets/logo.png'
+import Header from '../components/Header'
+
 const Home = () => {
+
   return (
     <>
-    <div className="header">
-      <Header/>
-    </div>
-    
+
+
+      <Header />
+
+
     </>
   )
 }

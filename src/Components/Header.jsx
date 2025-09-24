@@ -1,30 +1,32 @@
-import React from 'react'
-import logo from '../assets/logo.png'
-import lupa from '../assets/lupa.png'
-import carrinho from '../assets/carrinho.png'
+import logo from '../assets/imgs/logo.png';
+import InputSeach from './InputSearch'
+import React, { useState } from 'react'
+import { ShoppingCart } from 'lucide-react';
+
 const Header = () => {
+    const [cartCount, setCartCount] = useState(0)
     return (
         <>
+
             <header className='w-full bg-[#EE4D2D] h-35 flex items-center justify-around align-space gap-10'>
                 {/* // Logo da Shopee */}
                 <div>
                     <img src={logo} alt="" />
                 </div>
 
-                {/* // Barra de pesquisa */}
-                <div className='flex bg-white rounded-md'>
-                    <input type='text' placeholder='BUSCAR NA SHOPEE' className='  w-200  rounded-l-md p-2 outline-none' />
-                    <button className='cursor-pointer hover:opacity-90 h-10 w-16 bg-[#EE4D2D] rounded-md text-white font-bold flex items-center justify-center m-1.5 '>
-                        <img src={lupa} alt="" className='' />
-                    </button>
-                </div>
+                <InputSeach />
 
                 {/* // Ícone do carrinho de compras */}
-                <div>
-                    <img src={carrinho} alt="" className='w-9 h-9' />
+                <div className='relative'>
+                    <span className='text-white font-bold absolute -top-2 -left-[-25px] bg-red-600 text-white text-xs font-bold px-2 py-0.5 rounded-full'>{cartCount}</span>
+                    <ShoppingCart className='w-9 h-9 text-white' />
+                    <button onClick={() => setCartCount(cartCount + 1)}>adicionar</button>
                 </div>
 
             </header>
+
+
+
         </>
     )
 }
