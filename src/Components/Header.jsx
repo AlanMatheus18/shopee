@@ -12,7 +12,7 @@ const Header = () => {
                 <Options />
                 <div className='h-26 flex items-center justify-around align-space gap-10'>
                     {/* // Logo da Shopee */}
-                    <img src={logo} alt="" className='h-26'/>
+                    <img src={logo} alt="" className='h-25'/>
 
                     <InputSeach />
 

@@ -1,11 +1,14 @@
 import React from 'react'
 import Promotions from './Promotions'
+
 const Body = () => {
   return (
     <>
-    <body>
+    <body className='text-[#ffffff]'>
         <Promotions/>
     </body>
+
+    
     </>
   )
 }
